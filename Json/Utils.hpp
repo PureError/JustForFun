@@ -11,7 +11,7 @@ do {\
 } while(false)
 
 
-namespace Json
+namespace YTCJson
 {
     template<typename T, size_t N>
     inline bool IsInArray(const T(&arr) [N], const T v) 
@@ -77,6 +77,13 @@ namespace Json
         }
         return std::string(utfString, kMaxBytes);
     }
+
+	template<typename T>
+	void SafeDelete(void*& ptr)
+	{
+		delete static_cast<T*>(ptr);
+		ptr = nullptr;
+	}
 }
 
 #endif 
