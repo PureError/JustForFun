@@ -32,5 +32,8 @@
     <ClInclude Include="Parser.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="File.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -237,6 +237,7 @@ namespace YTCJson
 
     YTCJson::Value& Value::operator=(const Value& other)
     {
+		SetNull();
         switch (other.type_)
         {
         case ValueType::kString:

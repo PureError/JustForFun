@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Define.h" />
+    <ClInclude Include="File.hpp" />
     <ClInclude Include="JsonValue.hpp" />
     <ClInclude Include="Parser.hpp" />
     <ClInclude Include="Utils.hpp" />
