@@ -1,5 +1,6 @@
 
 #include "Parser.hpp"
+#include "File.hpp"
 #include <iostream>
 using namespace std;
 
@@ -114,7 +115,16 @@ public:
 };
 int main()
 {
-    Test t;
-    t.Start();
+    //Test t;
+    //t.Start();
+    YTCJson::Parser parser;
+    Ytc::Data data = Ytc::File::ReadAllBytes("C:\\Users\\yutc\\Documents\\Visual Studio 2013\\Json\\Json\\config.json");
+    std::string jsonString = data.ToString();
+    parser.Parse(jsonString.c_str());
+    const auto& value = parser.GetValue();
+    auto& initCfg = value["init_cfg"];
+    cout << "Ëæ±ã¶ÁÁ©Öµ:" << endl;
+    cout << initCfg["name"].AsStdString() << endl;
+    cout << value["simulator_screen_size"].At(0)["title"].AsStdString() << endl;
     return 0;
 }

@@ -68,6 +68,7 @@
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Data.hpp" />
     <ClInclude Include="Define.h" />
     <ClInclude Include="File.hpp" />
     <ClInclude Include="JsonValue.hpp" />

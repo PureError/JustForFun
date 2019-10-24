@@ -232,7 +232,7 @@ namespace YTCJson
                     return ParseMessage::kCorrectly;
                     break;
                 default:
-                    JSON_LOG("Unexcept character!");
+                    JSON_LOG("Unexcepted character!");
 					value.SetNull();
                     return ParseMessage::kInvalidJson;
                     break;
